@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enotrium Syndicate</title>
-  <meta name="description" content="Enotrium Syndicate — Applied AI Lab for Autonomous Systems">
+  <title>Enotrium</title>
+  <meta name="description" content="Enotrium — Applied AI Lab for Autonomous Systems">
   <link rel="icon" type="image/png" href="EnotriumWhiteLogo.png">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,18 +12,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Iceland&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header class="topbar">
   <div class="menu-toggle" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
+
+  <nav class="menu-dropdown" id="menu">
+    <a href="/team" style="font-family: 'Inter', sans-serif;">Team</a>
+  </nav>
 </header>
 
   <!-- Left Sidebar -->
   <aside class="sidebar">
     <div class="logo">
-      <img src="EnotriumWhiteLogo.png" alt="Enotrium Syndicate">
+      <img src="EnotriumWhiteLogo.png" alt="Enotrium">
     </div>
     <nav class="sidebar-links">
       <a href="https://enotrium.org" target="_blank" rel="noopener">enotrium.org</a>
@@ -32,11 +37,13 @@
   </aside>
 
   <main class="container">
+    
     <!-- Hero -->
     <header class="hero">
       <h1 class="hero-title">Enotrium Syndicate</h1>
       <p class="hero-subtitle">World AI</p>
     </header>
+
   </main>
 
   <footer style="position: fixed; bottom: 40px; left: 40px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #999; line-height: 1.8;">
@@ -45,10 +52,12 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      // Menu items removed - nothing to show
-      console.log("Menu clicked - no links");
-    }
-  </script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+  document.querySelector(".menu-toggle").classList.toggle("active");
+}
+</script>
+
 </body>
 </html>
+
